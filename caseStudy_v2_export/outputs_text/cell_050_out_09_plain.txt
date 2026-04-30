@@ -1,0 +1,4 @@
+                insight                                                value
+0      SemEval mode gap              markers beats masking by 0.053 Macro-F1
+1  External parse modes                                       label_proxy: 4
+2       Global best run  Synthetic-Imbalanced | TF-IDF + LR | Macro-F1=1.000

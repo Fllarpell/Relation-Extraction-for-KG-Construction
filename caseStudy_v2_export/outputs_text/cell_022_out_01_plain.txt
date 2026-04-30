@@ -1,0 +1,65 @@
+          dataset   model text_mode               split_note  f1_macro_mean  \
+0         SemEval     svm   markers  stratified_random_split       0.736178   
+1         SemEval      nb   markers  stratified_random_split       0.719576   
+2         SemEval  logreg   markers  stratified_random_split       0.717966   
+3         SemEval     svm       raw  stratified_random_split       0.692495   
+4         SemEval      rf   markers  stratified_random_split       0.684153   
+5         SemEval  logreg       raw  stratified_random_split       0.680138   
+6         SemEval      nb       raw  stratified_random_split       0.677847   
+7         SemEval     svm   masking  stratified_random_split       0.674842   
+8         SemEval  logreg   masking  stratified_random_split       0.671042   
+9         SemEval      nb   masking  stratified_random_split       0.665573   
+10        SemEval      rf   masking  stratified_random_split       0.650965   
+11        SemEval      rf       raw  stratified_random_split       0.638326   
+12  Synthetic-Adv  logreg   markers      group_holdout_split       1.000000   
+13  Synthetic-Adv  logreg   masking      group_holdout_split       1.000000   
+14  Synthetic-Adv  logreg       raw      group_holdout_split       1.000000   
+15  Synthetic-Adv      nb   markers      group_holdout_split       1.000000   
+16  Synthetic-Adv      nb   masking      group_holdout_split       1.000000   
+17  Synthetic-Adv      nb       raw      group_holdout_split       1.000000   
+18  Synthetic-Adv      rf   markers      group_holdout_split       1.000000   
+19  Synthetic-Adv      rf   masking      group_holdout_split       1.000000   
+
+    f1_macro_std  mcc_mean  pr_auc_mean  roc_auc_mean  fn_mean  fp_mean  \
+0       0.022314  0.679083     0.788423      0.922851      0.0      0.0   
+1       0.036497  0.676096     0.780056      0.920696      0.0      0.0   
+2       0.025363  0.655359     0.771524      0.917215      0.0      0.0   
+3       0.012520  0.629210     0.750675      0.906214      0.0      0.0   
+4       0.026464  0.608107     0.734909      0.896367      0.0      0.0   
+5       0.015167  0.611804     0.733448      0.900999      0.0      0.0   
+6       0.009268  0.621192     0.739055      0.902041      0.0      0.0   
+7       0.018568  0.609943     0.736429      0.898596      0.0      0.0   
+8       0.018483  0.598071     0.724462      0.895945      0.0      0.0   
+9       0.022862  0.612091     0.722844      0.896822      0.0      0.0   
+10      0.025814  0.571640     0.708162      0.883233      0.0      0.0   
+11      0.027304  0.555721     0.686014      0.876902      0.0      0.0   
+12      0.000000  1.000000     1.000000      1.000000      0.0      0.0   
+13      0.000000  1.000000     1.000000      1.000000      0.0      0.0   
+14      0.000000  1.000000     1.000000      1.000000      0.0      0.0   
+15      0.000000  1.000000     1.000000      1.000000      0.0      0.0   
+16      0.000000  1.000000     1.000000      1.000000      0.0      0.0   
+17      0.000000  1.000000     1.000000      1.000000      0.0      0.0   
+18      0.000000  1.000000     1.000000      1.000000      0.0      0.0   
+19      0.000000  1.000000     1.000000      1.000000      0.0      0.0   
+
+    conf_mean  
+0    0.257555  
+1    0.262669  
+2    0.276616  
+3    0.298466  
+4    0.314737  
+5    0.312413  
+6    0.306834  
+7    0.313808  
+8    0.322641  
+9    0.314272  
+10   0.343561  
+11   0.357043  
+12   0.000000  
+13   0.000000  
+14   0.000000  
+15   0.000000  
+16   0.000000  
+17   0.000000  
+18   0.000000  
+19   0.000000  

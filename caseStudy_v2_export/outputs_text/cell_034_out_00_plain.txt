@@ -1,0 +1,7 @@
+                dataset  rows  classes    majority_class  \
+0  Synthetic-Imbalanced  1120        4              NONE   
+1       Synthetic-Noisy  1600        4  HEADQUARTERED_IN   
+
+   imbalance_ratio_max_min  
+0                 2.500000  
+1                 1.040712  

@@ -1,0 +1,11 @@
+                  dataset_key                       model  f1_macro       mcc  \
+0            dbpedia_14:train  SBERT + TorchHead (MiniLM)  0.945616  0.942531   
+1               ag_news:train  SBERT + TorchHead (MiniLM)  0.849025  0.800292   
+2         yelp_polarity:train                 TF-IDF + LR  0.825000  0.650000   
+3  sem_eval_2010_task_8:train                 TF-IDF + LR  0.630405  0.617865   
+
+   pr_auc_macro  runtime_sec  
+0      0.978878        12.96  
+1      0.911059         7.53  
+2           NaN         0.06  
+3      0.648756         0.26  

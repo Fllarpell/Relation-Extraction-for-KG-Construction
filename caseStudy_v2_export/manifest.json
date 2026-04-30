@@ -1,0 +1,844 @@
+{
+  "summary": {
+    "notebook": "/Users/fllarpy/Documents/projects/homeworks/nlp/caseStudy_v2.ipynb",
+    "total_cells": 55,
+    "code_cells_with_outputs": 22,
+    "total_outputs": 84,
+    "total_images": 41,
+    "total_text_exports": 84,
+    "total_html_exports": 34
+  },
+  "outputs": [
+    {
+      "cell_index": 1,
+      "output_index": 0,
+      "output_type": "stream",
+      "files": [
+        "outputs_text/cell_001_out_00_stream.txt"
+      ],
+      "preview": "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/site-packages/tqdm/auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthed"
+    },
+    {
+      "cell_index": 5,
+      "output_index": 0,
+      "output_type": "stream",
+      "files": [
+        "outputs_text/cell_005_out_00_stream.txt"
+      ],
+      "preview": "Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads. | "
+    },
+    {
+      "cell_index": 5,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_005_out_01_plain.txt",
+        "outputs_html/cell_005_out_01.html"
+      ],
+      "preview": "                                                                                                                                           sentence  \\ | 0  In his latest book he chronicles, in great det"
+    },
+    {
+      "cell_index": 6,
+      "output_index": 0,
+      "output_type": "stream",
+      "files": [
+        "outputs_text/cell_006_out_00_stream.txt"
+      ],
+      "preview": "Synthetic rows: 1600 | SemEval rows: 3585 | "
+    },
+    {
+      "cell_index": 19,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_019_out_00_plain.txt",
+        "outputs_html/cell_019_out_00.html"
+      ],
+      "preview": "          dataset   model text_mode               split_note  f1_macro_mean  \\ | 0         SemEval     svm   markers  stratified_random_split       0.736178    | 1         SemEval      nb   markers  strat"
+    },
+    {
+      "cell_index": 20,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_020_out_00.png",
+        "outputs_text/cell_020_out_00_plain.txt"
+      ],
+      "preview": "<Figure size 900x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 20,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_020_out_01.png",
+        "outputs_text/cell_020_out_01_plain.txt"
+      ],
+      "preview": "<Figure size 600x400 with 2 Axes>"
+    },
+    {
+      "cell_index": 20,
+      "output_index": 2,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_020_out_02.png",
+        "outputs_text/cell_020_out_02_plain.txt"
+      ],
+      "preview": "<Figure size 1000x480 with 1 Axes>"
+    },
+    {
+      "cell_index": 20,
+      "output_index": 3,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_020_out_03.png",
+        "outputs_text/cell_020_out_03_plain.txt"
+      ],
+      "preview": "<Figure size 900x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 20,
+      "output_index": 4,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_020_out_04.png",
+        "outputs_text/cell_020_out_04_plain.txt"
+      ],
+      "preview": "<Figure size 600x400 with 2 Axes>"
+    },
+    {
+      "cell_index": 20,
+      "output_index": 5,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_020_out_05.png",
+        "outputs_text/cell_020_out_05_plain.txt"
+      ],
+      "preview": "<Figure size 1000x480 with 1 Axes>"
+    },
+    {
+      "cell_index": 21,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_021_out_00.png",
+        "outputs_text/cell_021_out_00_plain.txt"
+      ],
+      "preview": "<Figure size 620x520 with 2 Axes>"
+    },
+    {
+      "cell_index": 21,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_021_out_01.png",
+        "outputs_text/cell_021_out_01_plain.txt"
+      ],
+      "preview": "<Figure size 620x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 21,
+      "output_index": 2,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_021_out_02.png",
+        "outputs_text/cell_021_out_02_plain.txt"
+      ],
+      "preview": "<Figure size 620x520 with 2 Axes>"
+    },
+    {
+      "cell_index": 21,
+      "output_index": 3,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_021_out_03.png",
+        "outputs_text/cell_021_out_03_plain.txt"
+      ],
+      "preview": "<Figure size 620x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 22,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_022_out_00_plain.txt",
+        "outputs_html/cell_022_out_00.html"
+      ],
+      "preview": "          dataset  seed   model text_mode  f1_macro  mcc  roc_auc_ovr_macro  \\ | 0   Synthetic-Adv    11  logreg       raw       1.0  1.0                1.0    | 1   Synthetic-Adv    11  logreg   masking "
+    },
+    {
+      "cell_index": 22,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_022_out_01_plain.txt",
+        "outputs_html/cell_022_out_01.html"
+      ],
+      "preview": "          dataset   model text_mode               split_note  f1_macro_mean  \\ | 0         SemEval     svm   markers  stratified_random_split       0.736178    | 1         SemEval      nb   markers  strat"
+    },
+    {
+      "cell_index": 26,
+      "output_index": 0,
+      "output_type": "execute_result",
+      "files": [
+        "outputs_text/cell_026_out_00_plain.txt",
+        "outputs_html/cell_026_out_00.html"
+      ],
+      "preview": "  exp_id                dataset                     input  \\ | 0    E01         Synthetic-Hard              raw entities    | 1    E02         Synthetic-Hard              raw entities    | 2    E03         "
+    },
+    {
+      "cell_index": 28,
+      "output_index": 0,
+      "output_type": "stream",
+      "files": [
+        "outputs_text/cell_028_out_00_stream.txt"
+      ],
+      "preview": "Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8718.15it/s] | "
+    },
+    {
+      "cell_index": 28,
+      "output_index": 1,
+      "output_type": "execute_result",
+      "files": [
+        "outputs_text/cell_028_out_01_plain.txt",
+        "outputs_html/cell_028_out_01.html"
+      ],
+      "preview": "               model  f1_macro  f1_micro  f1_weighted  precision_macro  \\ | 2        TF-IDF + LR  1.000000    1.0000     1.000000         1.000000    | 3  SBERT + TorchHead  1.000000    1.0000     1.00000"
+    },
+    {
+      "cell_index": 30,
+      "output_index": 0,
+      "output_type": "stream",
+      "files": [
+        "outputs_text/cell_030_out_00_stream.txt"
+      ],
+      "preview": "Loading weights: 100%|██████████| 103/103 [00:00<00:00, 7938.36it/s] | Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6996.19it/s] | Loading weights: 100%|██████████| 199/199 [00:00<00:00, 8336.0"
+    },
+    {
+      "cell_index": 30,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_030_out_01_plain.txt",
+        "outputs_html/cell_030_out_01.html"
+      ],
+      "preview": "                  model  f1_macro  f1_micro  f1_weighted  precision_macro  \\ | 0  SemEval: TF-IDF + LR  0.678074  0.688982     0.678225         0.676843    |  |    recall_macro       mcc  balanced_acc  cohe"
+    },
+    {
+      "cell_index": 32,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_032_out_00_plain.txt",
+        "outputs_html/cell_032_out_00.html"
+      ],
+      "preview": "  exp_id   status    dataset                               model text_mode  \\ | 0    E06  skipped  Re-TACRED  SentenceTransformer + PyTorch head   markers    |  |    rows_used                               "
+    },
+    {
+      "cell_index": 32,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_032_out_01_plain.txt",
+        "outputs_html/cell_032_out_01.html"
+      ],
+      "preview": "  exp_id     status                dataset  \\ | 0    E05  completed  SemEval-2010 (subset)    | 1    E06    skipped              Re-TACRED    |  |                                 model  f1_macro       mcc  pr"
+    },
+    {
+      "cell_index": 34,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_034_out_00_plain.txt",
+        "outputs_html/cell_034_out_00.html"
+      ],
+      "preview": "                dataset  rows  classes    majority_class  \\ | 0  Synthetic-Imbalanced  1120        4              NONE    | 1       Synthetic-Noisy  1600        4  HEADQUARTERED_IN    |  |    imbalance_ratio_"
+    },
+    {
+      "cell_index": 34,
+      "output_index": 1,
+      "output_type": "stream",
+      "files": [
+        "outputs_text/cell_034_out_01_stream.txt"
+      ],
+      "preview": "Loading weights: 100%|██████████| 103/103 [00:00<00:00, 9184.15it/s] | Loading weights: 100%|██████████| 103/103 [00:00<00:00, 17433.25it/s] | "
+    },
+    {
+      "cell_index": 34,
+      "output_index": 2,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_034_out_02_plain.txt",
+        "outputs_html/cell_034_out_02.html"
+      ],
+      "preview": "                               experiment     status  runtime_sec reason  \\ | 0        Synthetic-Imbalanced | TF-IDF+LR  completed         0.03           | 1  Synthetic-Imbalanced | SBERT+TorchHead  compl"
+    },
+    {
+      "cell_index": 34,
+      "output_index": 3,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_034_out_03_plain.txt",
+        "outputs_html/cell_034_out_03.html"
+      ],
+      "preview": "                dataset        model  f1_macro       mcc  pr_auc_macro  \\ | 0  Synthetic-Imbalanced  TF-IDF + LR  1.000000  1.000000      1.000000    | 1       Synthetic-Noisy  TF-IDF + LR  0.896751  0.86"
+    },
+    {
+      "cell_index": 34,
+      "output_index": 4,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_034_out_04_plain.txt",
+        "outputs_html/cell_034_out_04.html"
+      ],
+      "preview": "             insight  \\ | 0     Best extra run    | 1         E06 status    | 2  Poster-ready note    |  |                                                                                                 value  "
+    },
+    {
+      "cell_index": 36,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_036_out_00_plain.txt",
+        "outputs_html/cell_036_out_00.html"
+      ],
+      "preview": "                  dataset_key  status   parse_mode  rows  classes  \\ | 0  sem_eval_2010_task_8:train  loaded  label_proxy  2766       14    | 1               ag_news:train  loaded  label_proxy   800      "
+    },
+    {
+      "cell_index": 36,
+      "output_index": 1,
+      "output_type": "stream",
+      "files": [
+        "outputs_text/cell_036_out_01_stream.txt"
+      ],
+      "preview": "Loading weights: 100%|██████████| 103/103 [00:00<00:00, 8306.99it/s] | Loading weights: 100%|██████████| 103/103 [00:00<00:00, 15653.79it/s] | Loading weights: 100%|██████████| 103/103 [00:00<00:00, 12327"
+    },
+    {
+      "cell_index": 36,
+      "output_index": 2,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_036_out_02_plain.txt",
+        "outputs_html/cell_036_out_02.html"
+      ],
+      "preview": "                  dataset_key                       model     status  \\ | 0  sem_eval_2010_task_8:train                 TF-IDF + LR  completed    | 1  sem_eval_2010_task_8:train  SBERT + TorchHead (MiniLM"
+    },
+    {
+      "cell_index": 36,
+      "output_index": 3,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_036_out_03_plain.txt",
+        "outputs_html/cell_036_out_03.html"
+      ],
+      "preview": "                  dataset_key                       model  f1_macro       mcc  \\ | 0            dbpedia_14:train  SBERT + TorchHead (MiniLM)  0.945616  0.942531    | 1               ag_news:train  SBERT +"
+    },
+    {
+      "cell_index": 38,
+      "output_index": 0,
+      "output_type": "execute_result",
+      "files": [
+        "outputs_text/cell_038_out_00_plain.txt",
+        "outputs_html/cell_038_out_00.html"
+      ],
+      "preview": "      dataset     family model_key text_mode  f1_macro  f1_micro  f1_weighted  \\ | 21    SemEval  classical       svm   markers  0.747475  0.754533     0.747627    | 20    SemEval  classical    logreg   m"
+    },
+    {
+      "cell_index": 40,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_040_out_00.png",
+        "outputs_text/cell_040_out_00_plain.txt"
+      ],
+      "preview": "<Figure size 700x400 with 1 Axes>"
+    },
+    {
+      "cell_index": 40,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_040_out_01.png",
+        "outputs_text/cell_040_out_01_plain.txt"
+      ],
+      "preview": "<Figure size 700x400 with 1 Axes>"
+    },
+    {
+      "cell_index": 40,
+      "output_index": 2,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_040_out_02.png",
+        "outputs_text/cell_040_out_02_plain.txt"
+      ],
+      "preview": "<Figure size 600x400 with 2 Axes>"
+    },
+    {
+      "cell_index": 40,
+      "output_index": 3,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_040_out_03.png",
+        "outputs_text/cell_040_out_03_plain.txt"
+      ],
+      "preview": "<Figure size 700x400 with 1 Axes>"
+    },
+    {
+      "cell_index": 40,
+      "output_index": 4,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_040_out_04.png",
+        "outputs_text/cell_040_out_04_plain.txt"
+      ],
+      "preview": "<Figure size 600x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 40,
+      "output_index": 5,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_040_out_05.png",
+        "outputs_text/cell_040_out_05_plain.txt"
+      ],
+      "preview": "<Figure size 500x400 with 1 Axes>"
+    },
+    {
+      "cell_index": 40,
+      "output_index": 6,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_040_out_06.png",
+        "outputs_text/cell_040_out_06_plain.txt"
+      ],
+      "preview": "<Figure size 600x400 with 2 Axes>"
+    },
+    {
+      "cell_index": 40,
+      "output_index": 7,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_040_out_07.png",
+        "outputs_text/cell_040_out_07_plain.txt"
+      ],
+      "preview": "<Figure size 700x400 with 1 Axes>"
+    },
+    {
+      "cell_index": 40,
+      "output_index": 8,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_040_out_08.png",
+        "outputs_text/cell_040_out_08_plain.txt"
+      ],
+      "preview": "<Figure size 600x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 40,
+      "output_index": 9,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_040_out_09.png",
+        "outputs_text/cell_040_out_09_plain.txt"
+      ],
+      "preview": "<Figure size 500x400 with 1 Axes>"
+    },
+    {
+      "cell_index": 42,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_042_out_00.png",
+        "outputs_text/cell_042_out_00_plain.txt"
+      ],
+      "preview": "<Figure size 600x500 with 2 Axes>"
+    },
+    {
+      "cell_index": 42,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_042_out_01.png",
+        "outputs_text/cell_042_out_01_plain.txt"
+      ],
+      "preview": "<Figure size 600x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 42,
+      "output_index": 2,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_042_out_02.png",
+        "outputs_text/cell_042_out_02_plain.txt"
+      ],
+      "preview": "<Figure size 600x500 with 2 Axes>"
+    },
+    {
+      "cell_index": 42,
+      "output_index": 3,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_042_out_03.png",
+        "outputs_text/cell_042_out_03_plain.txt"
+      ],
+      "preview": "<Figure size 600x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 44,
+      "output_index": 0,
+      "output_type": "stream",
+      "files": [
+        "outputs_text/cell_044_out_00_stream.txt"
+      ],
+      "preview": "Loading weights: 100%|██████████| 199/199 [00:00<00:00, 6380.02it/s] | "
+    },
+    {
+      "cell_index": 44,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_044_out_01.png",
+        "outputs_text/cell_044_out_01_plain.txt"
+      ],
+      "preview": "<Figure size 700x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 46,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_046_out_00.png",
+        "outputs_text/cell_046_out_00_plain.txt"
+      ],
+      "preview": "<Figure size 1000x700 with 1 Axes>"
+    },
+    {
+      "cell_index": 46,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_046_out_01_plain.txt",
+        "outputs_html/cell_046_out_01.html"
+      ],
+      "preview": "                  edges_per_relation | pred_relation                        | HEADQUARTERED_IN                  80 | FOUNDER_OF                        80 | CEO_OF                            80"
+    },
+    {
+      "cell_index": 48,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_048_out_00.png",
+        "outputs_text/cell_048_out_00_plain.txt"
+      ],
+      "preview": "<Figure size 1000x700 with 1 Axes>"
+    },
+    {
+      "cell_index": 48,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_048_out_01.png",
+        "outputs_text/cell_048_out_01_plain.txt"
+      ],
+      "preview": "<Figure size 1000x700 with 1 Axes>"
+    },
+    {
+      "cell_index": 48,
+      "output_index": 2,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_048_out_02.png",
+        "outputs_text/cell_048_out_02_plain.txt"
+      ],
+      "preview": "<Figure size 1000x700 with 1 Axes>"
+    },
+    {
+      "cell_index": 48,
+      "output_index": 3,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_048_out_03.png",
+        "outputs_text/cell_048_out_03_plain.txt"
+      ],
+      "preview": "<Figure size 1000x700 with 1 Axes>"
+    },
+    {
+      "cell_index": 50,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_050_out_00_plain.txt",
+        "outputs_html/cell_050_out_00.html"
+      ],
+      "preview": "  text_mode  f1_macro       mcc  pr_auc_macro | 0   markers  0.713638  0.658617      0.763099 | 2       raw  0.683538  0.620870      0.732362 | 1   masking  0.660954  0.598083      0.715037"
+    },
+    {
+      "cell_index": 50,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_050_out_01.png",
+        "outputs_text/cell_050_out_01_plain.txt"
+      ],
+      "preview": "<Figure size 700x400 with 1 Axes>"
+    },
+    {
+      "cell_index": 50,
+      "output_index": 2,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_050_out_02.png",
+        "outputs_text/cell_050_out_02_plain.txt"
+      ],
+      "preview": "<Figure size 700x400 with 2 Axes>"
+    },
+    {
+      "cell_index": 50,
+      "output_index": 3,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_050_out_03_plain.txt",
+        "outputs_html/cell_050_out_03.html"
+      ],
+      "preview": "    model text_mode  f1_macro_mean  f1_macro_std  mcc_mean  pr_auc_mean | 0     svm   markers       0.736178      0.022314  0.679083     0.788423 | 1      nb   markers       0.719576      0.036497  0.6760"
+    },
+    {
+      "cell_index": 50,
+      "output_index": 4,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_050_out_04.png",
+        "outputs_text/cell_050_out_04_plain.txt"
+      ],
+      "preview": "<Figure size 900x400 with 1 Axes>"
+    },
+    {
+      "cell_index": 50,
+      "output_index": 5,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_050_out_05_plain.txt",
+        "outputs_html/cell_050_out_05.html"
+      ],
+      "preview": "                  dataset_key  status   parse_mode  rows  classes  \\ | 0  sem_eval_2010_task_8:train  loaded  label_proxy  2766       14    | 1               ag_news:train  loaded  label_proxy   800      "
+    },
+    {
+      "cell_index": 50,
+      "output_index": 6,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_050_out_06.png",
+        "outputs_text/cell_050_out_06_plain.txt"
+      ],
+      "preview": "<Figure size 500x350 with 1 Axes>"
+    },
+    {
+      "cell_index": 50,
+      "output_index": 7,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_050_out_07_plain.txt",
+        "outputs_html/cell_050_out_07.html"
+      ],
+      "preview": "                       dataset           source                  model_name  \\ | 0         Synthetic-Imbalanced  internal stress                 TF-IDF + LR    | 1         Synthetic-Imbalanced  internal s"
+    },
+    {
+      "cell_index": 50,
+      "output_index": 8,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_050_out_08.png",
+        "outputs_text/cell_050_out_08_plain.txt"
+      ],
+      "preview": "<Figure size 1000x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 50,
+      "output_index": 9,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_050_out_09_plain.txt",
+        "outputs_html/cell_050_out_09.html"
+      ],
+      "preview": "                insight                                                value | 0      SemEval mode gap              markers beats masking by 0.053 Macro-F1 | 1  External parse modes                       "
+    },
+    {
+      "cell_index": 52,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_052_out_00_plain.txt",
+        "outputs_html/cell_052_out_00.html"
+      ],
+      "preview": "                  dataset_key  status   parse_mode  rows  classes  \\ | 0  sem_eval_2010_task_8:train  loaded  label_proxy  2766       14    | 1               ag_news:train  loaded  label_proxy   800      "
+    },
+    {
+      "cell_index": 52,
+      "output_index": 1,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_052_out_01_plain.txt",
+        "outputs_html/cell_052_out_01.html"
+      ],
+      "preview": "    parse_mode  count | 0  label_proxy      4"
+    },
+    {
+      "cell_index": 52,
+      "output_index": 2,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_052_out_02.png",
+        "outputs_text/cell_052_out_02_plain.txt"
+      ],
+      "preview": "<Figure size 500x350 with 1 Axes>"
+    },
+    {
+      "cell_index": 52,
+      "output_index": 3,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_052_out_03_plain.txt",
+        "outputs_html/cell_052_out_03.html"
+      ],
+      "preview": "                  dataset_key                       model  f1_macro       mcc  \\ | 3               ag_news:train  SBERT + TorchHead (MiniLM)  0.849025  0.800292    | 2               ag_news:train         "
+    },
+    {
+      "cell_index": 52,
+      "output_index": 4,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_052_out_04.png",
+        "outputs_text/cell_052_out_04_plain.txt"
+      ],
+      "preview": "<Figure size 800x500 with 1 Axes>"
+    },
+    {
+      "cell_index": 52,
+      "output_index": 5,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_052_out_05_plain.txt",
+        "outputs_html/cell_052_out_05.html"
+      ],
+      "preview": "                  dataset_key  f1_macro_TF-IDF + LR  \\ | 0               ag_news:train              0.773220    | 1            dbpedia_14:train              0.926438    | 3         yelp_polarity:train      "
+    },
+    {
+      "cell_index": 52,
+      "output_index": 6,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_052_out_06.png",
+        "outputs_text/cell_052_out_06_plain.txt"
+      ],
+      "preview": "<Figure size 800x400 with 1 Axes>"
+    },
+    {
+      "cell_index": 52,
+      "output_index": 7,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_052_out_07.png",
+        "outputs_text/cell_052_out_07_plain.txt"
+      ],
+      "preview": "<Figure size 800x400 with 1 Axes>"
+    },
+    {
+      "cell_index": 52,
+      "output_index": 8,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_052_out_08_plain.txt",
+        "outputs_html/cell_052_out_08.html"
+      ],
+      "preview": "                  dataset_key  delta_f1_neural_minus_lr  \\ | 0               ag_news:train                    0.0758    | 1            dbpedia_14:train                    0.0192    | 2         yelp_polarity"
+    },
+    {
+      "cell_index": 52,
+      "output_index": 9,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_052_out_09_plain.txt",
+        "outputs_html/cell_052_out_09.html"
+      ],
+      "preview": "                insight  \\ | 0      SemEval mode gap    | 1  External parse modes    | 2       Global best run    | 3  External neural gain    |  |                                                                 "
+    },
+    {
+      "cell_index": 54,
+      "output_index": 0,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_054_out_00_plain.txt",
+        "outputs_html/cell_054_out_00.html"
+      ],
+      "preview": "                     primary_target  \\ | 0  SemEval KG-style relation output    |  |                                       selection_rule  \\ | 0  Use best available SemEval model from sem_summary    |  |         "
+    },
+    {
+      "cell_index": 54,
+      "output_index": 1,
+      "output_type": "stream",
+      "files": [
+        "outputs_text/cell_054_out_01_stream.txt"
+      ],
+      "preview": "KG model used: TF-IDF + LR | "
+    },
+    {
+      "cell_index": 54,
+      "output_index": 2,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_054_out_02_plain.txt",
+        "outputs_html/cell_054_out_02.html"
+      ],
+      "preview": "        pred_relation  accept_threshold  review_threshold | 2  Entity-Destination          0.843323          0.716824 | 0        Cause-Effect          0.834102          0.708987 | 1     Component-Whole     "
+    },
+    {
+      "cell_index": 54,
+      "output_index": 3,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_054_out_03_plain.txt",
+        "outputs_html/cell_054_out_03.html"
+      ],
+      "preview": "    queue  count | 0  reject    360 | 1  accept    156 | 2  review    103"
+    },
+    {
+      "cell_index": 54,
+      "output_index": 4,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_054_out_04_plain.txt",
+        "outputs_html/cell_054_out_04.html"
+      ],
+      "preview": "                     e1       pred_relation                   e2  confidence  \\ | 472         metacorpora  Entity-Destination              isthmus    0.992978    | 413         catastrophe        Cause-Eff"
+    },
+    {
+      "cell_index": 54,
+      "output_index": 5,
+      "output_type": "display_data",
+      "files": [
+        "outputs_text/cell_054_out_05_plain.txt",
+        "outputs_html/cell_054_out_05.html"
+      ],
+      "preview": "                  e1       pred_relation                       e2  confidence  \\ | 583           plight  Entity-Destination                 dwellers    0.842613    | 257             boss  Entity-Destinati"
+    },
+    {
+      "cell_index": 54,
+      "output_index": 6,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_054_out_06.png",
+        "outputs_text/cell_054_out_06_plain.txt"
+      ],
+      "preview": "<Figure size 1000x700 with 1 Axes>"
+    },
+    {
+      "cell_index": 54,
+      "output_index": 7,
+      "output_type": "display_data",
+      "files": [
+        "images/cell_054_out_07.png",
+        "outputs_text/cell_054_out_07_plain.txt"
+      ],
+      "preview": "<Figure size 500x350 with 1 Axes>"
+    }
+  ]
+}

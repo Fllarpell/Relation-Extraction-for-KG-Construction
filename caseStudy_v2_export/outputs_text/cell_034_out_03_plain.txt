@@ -1,0 +1,7 @@
+                dataset        model  f1_macro       mcc  pr_auc_macro  \
+0  Synthetic-Imbalanced  TF-IDF + LR  1.000000  1.000000      1.000000   
+1       Synthetic-Noisy  TF-IDF + LR  0.896751  0.862719      0.832263   
+
+   runtime_sec  
+0         0.03  
+1         0.03  

@@ -1,0 +1,11 @@
+                  dataset_key  delta_f1_neural_minus_lr  \
+0               ag_news:train                    0.0758   
+1            dbpedia_14:train                    0.0192   
+2         yelp_polarity:train                   -0.0250   
+3  sem_eval_2010_task_8:train                   -0.2563   
+
+   runtime_ratio_neural_over_lr                                 decision  
+0                        150.60                Prefer neural for quality  
+1                         27.57   Quality tie: choose by latency/compute  
+2                        126.33   Quality tie: choose by latency/compute  
+3                         41.15  Prefer TF-IDF+LR (neural underperforms)  

@@ -1,0 +1,15 @@
+  exp_id                dataset                     input  \
+0    E01         Synthetic-Hard              raw entities   
+1    E02         Synthetic-Hard              raw entities   
+2    E03         Synthetic-Hard     [ENT1]/[ENT2] masking   
+3    E04  SemEval-2010 (subset)     [ENT1]/[ENT2] masking   
+4    E05  SemEval-2010 (subset)  entity markers [E1]/[E2]   
+5    E06   Re-TACRED (optional)  entity markers [E1]/[E2]   
+
+                                model                                  goal  
+0                    Dependency Rules   High precision, low recall baseline  
+1              OpenIE-style Heuristic               Boundary error analysis  
+2         TF-IDF + LogisticRegression       Lightweight supervised baseline  
+3         TF-IDF + LogisticRegression                    Real-data baseline  
+4  SentenceTransformer + PyTorch head                Strong neural baseline  
+5  SentenceTransformer + PyTorch head  Stress test on noisy/imbalanced data  

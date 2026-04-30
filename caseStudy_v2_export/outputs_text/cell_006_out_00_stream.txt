@@ -1,0 +1,2 @@
+Synthetic rows: 1600
+SemEval rows: 3585

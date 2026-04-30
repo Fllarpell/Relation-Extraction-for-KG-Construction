@@ -1,0 +1,11 @@
+                  dataset_key  status   parse_mode  rows  classes  \
+0  sem_eval_2010_task_8:train  loaded  label_proxy  2766       14   
+1               ag_news:train  loaded  label_proxy   800        4   
+2            dbpedia_14:train  loaded  label_proxy  2800       14   
+3         yelp_polarity:train  loaded  label_proxy   400        2   
+
+   imbalance_ratio_max_min reason  
+0                 1.204819         
+1                 1.000000         
+2                 1.000000         
+3                 1.000000         

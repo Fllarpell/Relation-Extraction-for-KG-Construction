@@ -1,0 +1,11 @@
+                insight  \
+0      SemEval mode gap   
+1  External parse modes   
+2       Global best run   
+3  External neural gain   
+
+                                                                value  
+0                             markers beats masking by 0.053 Macro-F1  
+1                                                      label_proxy: 4  
+2                 Synthetic-Imbalanced | TF-IDF + LR | Macro-F1=1.000  
+3  Best gain on ag_news:train: delta Macro-F1=+0.076, runtime x150.60  

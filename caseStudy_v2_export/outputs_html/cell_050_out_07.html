@@ -1,0 +1,147 @@
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>dataset</th>
+      <th>source</th>
+      <th>model_name</th>
+      <th>f1_macro</th>
+      <th>mcc</th>
+      <th>pr_auc_macro</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Synthetic-Imbalanced</td>
+      <td>internal stress</td>
+      <td>TF-IDF + LR</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Synthetic-Imbalanced</td>
+      <td>internal stress</td>
+      <td>SBERT + TorchHead (MiniLM)</td>
+      <td>0.994582</td>
+      <td>0.993874</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>dbpedia_14:train</td>
+      <td>external HF</td>
+      <td>SBERT + TorchHead (MiniLM)</td>
+      <td>0.945616</td>
+      <td>0.942531</td>
+      <td>0.978878</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>dbpedia_14:train</td>
+      <td>external HF</td>
+      <td>TF-IDF + LR</td>
+      <td>0.926438</td>
+      <td>0.921423</td>
+      <td>0.969768</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Synthetic-Noisy</td>
+      <td>internal stress</td>
+      <td>TF-IDF + LR</td>
+      <td>0.896751</td>
+      <td>0.862719</td>
+      <td>0.832263</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Synthetic-Noisy</td>
+      <td>internal stress</td>
+      <td>SBERT + TorchHead (MiniLM)</td>
+      <td>0.887223</td>
+      <td>0.850186</td>
+      <td>0.841048</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>ag_news:train</td>
+      <td>external HF</td>
+      <td>SBERT + TorchHead (MiniLM)</td>
+      <td>0.849025</td>
+      <td>0.800292</td>
+      <td>0.911059</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>yelp_polarity:train</td>
+      <td>external HF</td>
+      <td>TF-IDF + LR</td>
+      <td>0.825000</td>
+      <td>0.650000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>yelp_polarity:train</td>
+      <td>external HF</td>
+      <td>SBERT + TorchHead (MiniLM)</td>
+      <td>0.800000</td>
+      <td>0.600000</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>ag_news:train</td>
+      <td>external HF</td>
+      <td>TF-IDF + LR</td>
+      <td>0.773220</td>
+      <td>0.702014</td>
+      <td>0.854890</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>SemEval</td>
+      <td>E05 core</td>
+      <td>SemEval: TF-IDF + LR</td>
+      <td>0.678074</td>
+      <td>0.613906</td>
+      <td>0.715911</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>sem_eval_2010_task_8:train</td>
+      <td>external HF</td>
+      <td>TF-IDF + LR</td>
+      <td>0.630405</td>
+      <td>0.617865</td>
+      <td>0.648756</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>sem_eval_2010_task_8:train</td>
+      <td>external HF</td>
+      <td>SBERT + TorchHead (MiniLM)</td>
+      <td>0.374154</td>
+      <td>0.358187</td>
+      <td>0.418430</td>
+    </tr>
+  </tbody>
+</table>
+</div>

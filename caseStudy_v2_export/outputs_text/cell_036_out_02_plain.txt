@@ -1,0 +1,19 @@
+                  dataset_key                       model     status  \
+0  sem_eval_2010_task_8:train                 TF-IDF + LR  completed   
+1  sem_eval_2010_task_8:train  SBERT + TorchHead (MiniLM)  completed   
+2               ag_news:train                 TF-IDF + LR  completed   
+3               ag_news:train  SBERT + TorchHead (MiniLM)  completed   
+4            dbpedia_14:train                 TF-IDF + LR  completed   
+5            dbpedia_14:train  SBERT + TorchHead (MiniLM)  completed   
+6         yelp_polarity:train                 TF-IDF + LR  completed   
+7         yelp_polarity:train  SBERT + TorchHead (MiniLM)  completed   
+
+   runtime_sec reason  f1_macro       mcc  pr_auc_macro  roc_auc_ovr_macro  
+0         0.26         0.630405  0.617865      0.648756           0.918747  
+1        10.70         0.374154  0.358187      0.418430           0.849469  
+2         0.05         0.773220  0.702014      0.854890           0.935052  
+3         7.53         0.849025  0.800292      0.911059           0.966510  
+4         0.47         0.926438  0.921423      0.969768           0.996913  
+5        12.96         0.945616  0.942531      0.978878           0.997785  
+6         0.06         0.825000  0.650000           NaN                NaN  
+7         7.58         0.800000  0.600000           NaN                NaN  

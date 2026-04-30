@@ -1,0 +1,9 @@
+             insight  \
+0     Best extra run   
+1         E06 status   
+2  Poster-ready note   
+
+                                                                                                value  
+0                                        Synthetic-Imbalanced | TF-IDF+LR (Macro-F1=1.000, MCC=1.000)  
+1                                     skipped | Re-TACRED dataset is unavailable in this environment.  
+2  Use status+runtime+imbalance profile together with Macro-F1/MCC/PR-AUC in final comparison figure.  

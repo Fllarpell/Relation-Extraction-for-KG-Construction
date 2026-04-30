@@ -1,0 +1,9 @@
+                                                                                                                                           sentence  \
+0  In his latest book he chronicles, in great detail and with first-hand knowledge, the factory's output of diesel and diesel electric locomotives.   
+1          The Baha'u'llah religion has liberated human minds by a prohibition within His Faith against any caste with ecclesiastical prerogatives.   
+2                                                              A lodge combines a colonial atmosphere with the rustic beauty and history of Africa.   
+
+         e1                   e2          relation  
+0   factory          locomotives  Product-Producer  
+1  religion          prohibition  Product-Producer  
+2     lodge  colonial atmosphere             Other  

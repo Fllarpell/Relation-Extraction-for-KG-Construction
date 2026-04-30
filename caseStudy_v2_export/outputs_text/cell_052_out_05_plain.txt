@@ -1,0 +1,23 @@
+                  dataset_key  f1_macro_TF-IDF + LR  \
+0               ag_news:train              0.773220   
+1            dbpedia_14:train              0.926438   
+3         yelp_polarity:train              0.825000   
+2  sem_eval_2010_task_8:train              0.630405   
+
+   f1_macro_SBERT + TorchHead (MiniLM)  delta_f1_neural_minus_lr  \
+0                             0.849025                  0.075806   
+1                             0.945616                  0.019179   
+3                             0.800000                 -0.025000   
+2                             0.374154                 -0.256251   
+
+   runtime_sec_TF-IDF + LR  runtime_sec_SBERT + TorchHead (MiniLM)  \
+0                     0.05                                    7.53   
+1                     0.47                                   12.96   
+3                     0.06                                    7.58   
+2                     0.26                                   10.70   
+
+   runtime_ratio_neural_over_lr  
+0                    150.600000  
+1                     27.574468  
+3                    126.333333  
+2                     41.153846  

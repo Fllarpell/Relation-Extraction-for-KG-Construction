@@ -1,0 +1,17 @@
+               model  f1_macro  f1_micro  f1_weighted  precision_macro  \
+2        TF-IDF + LR  1.000000    1.0000     1.000000         1.000000   
+3  SBERT + TorchHead  1.000000    1.0000     1.000000         1.000000   
+1       OpenIE-style  0.746735    0.7475     0.746735         0.746056   
+0   Dependency Rules  0.715676    0.7525     0.715676         0.715439   
+
+   recall_macro       mcc  balanced_acc  cohen_kappa  roc_auc_ovr_macro  \
+2        1.0000  1.000000        1.0000     1.000000           1.000000   
+3        1.0000  1.000000        1.0000     1.000000           1.000000   
+1        0.7475  0.663365        0.7475     0.663333           0.831667   
+0        0.7525  0.682070        0.7525     0.670000           0.835000   
+
+   pr_auc_macro  boundary_error_rate  
+2      1.000000                  NaN  
+3      1.000000                  NaN  
+1      0.653659              0.08125  
+0      0.636128                  NaN  

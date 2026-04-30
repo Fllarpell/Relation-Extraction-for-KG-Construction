@@ -1,0 +1,5 @@
+        pred_relation  accept_threshold  review_threshold
+2  Entity-Destination          0.843323          0.716824
+0        Cause-Effect          0.834102          0.708987
+1     Component-Whole          0.568776          0.483460
+3    Product-Producer          0.507297          0.431202

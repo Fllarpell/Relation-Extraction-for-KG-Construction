@@ -1,0 +1,5 @@
+  exp_id   status    dataset                               model text_mode  \
+0    E06  skipped  Re-TACRED  SentenceTransformer + PyTorch head   markers   
+
+   rows_used                                                 reason  
+0          0  Re-TACRED dataset is unavailable in this environment.  

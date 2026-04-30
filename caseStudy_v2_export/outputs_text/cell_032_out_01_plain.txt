@@ -1,0 +1,11 @@
+  exp_id     status                dataset  \
+0    E05  completed  SemEval-2010 (subset)   
+1    E06    skipped              Re-TACRED   
+
+                                model  f1_macro       mcc  pr_auc_macro  \
+0                SemEval: TF-IDF + LR  0.678074  0.613906      0.715911   
+1  SentenceTransformer + PyTorch head       NaN       NaN           NaN   
+
+   roc_auc_ovr_macro  
+0           0.895095  
+1                NaN  

@@ -1,0 +1,43 @@
+                     e1       pred_relation                   e2  confidence  \
+472         metacorpora  Entity-Destination              isthmus    0.992978   
+413         catastrophe        Cause-Effect                spill    0.990386   
+253              needle  Entity-Destination              machine    0.983997   
+128               water  Entity-Destination                seeds    0.983459   
+305               tides        Cause-Effect  gravitational force    0.982132   
+157          cysteamine  Entity-Destination        gastric juice    0.975844   
+99                panda  Entity-Destination                 park    0.974825   
+259                chip  Entity-Destination                  pet    0.973684   
+411     toxic materials  Entity-Destination                water    0.965707   
+170               cells  Entity-Destination              patient    0.959299   
+136             marshes  Entity-Destination                farms    0.957996   
+376                toll        Cause-Effect           earthquake    0.953911   
+148           suffering        Cause-Effect           terrorists    0.953309   
+183      food poisoning        Cause-Effect               eating    0.952560   
+518  increased pressure        Cause-Effect                tumor    0.951313   
+65                light        Cause-Effect              missile    0.948456   
+79                books     Component-Whole                bible    0.948395   
+228               flour  Entity-Destination                 bowl    0.947096   
+377                pain        Cause-Effect             accident    0.945090   
+595                card  Entity-Destination         mobile phone    0.943699   
+
+     accept_threshold  
+472          0.843323  
+413          0.834102  
+253          0.843323  
+128          0.843323  
+305          0.834102  
+157          0.843323  
+99           0.843323  
+259          0.843323  
+411          0.843323  
+170          0.843323  
+136          0.843323  
+376          0.834102  
+148          0.834102  
+183          0.834102  
+518          0.834102  
+65           0.834102  
+79           0.568776  
+228          0.843323  
+377          0.834102  
+595          0.843323  

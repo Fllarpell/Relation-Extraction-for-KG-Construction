@@ -1,0 +1,11 @@
+                               experiment     status  runtime_sec reason  \
+0        Synthetic-Imbalanced | TF-IDF+LR  completed         0.03          
+1  Synthetic-Imbalanced | SBERT+TorchHead  completed         6.51          
+2             Synthetic-Noisy | TF-IDF+LR  completed         0.03          
+3       Synthetic-Noisy | SBERT+TorchHead  completed         6.38          
+
+   f1_macro       mcc  pr_auc_macro  
+0  1.000000  1.000000      1.000000  
+1  0.994582  0.993874      1.000000  
+2  0.896751  0.862719      0.832263  
+3  0.887223  0.850186      0.841048  

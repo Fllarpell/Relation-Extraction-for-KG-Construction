@@ -1,0 +1,43 @@
+                  e1       pred_relation                       e2  confidence  \
+583           plight  Entity-Destination                 dwellers    0.842613   
+257             boss  Entity-Destination                   office    0.834743   
+267       earthquake        Cause-Effect                 blackout    0.829732   
+540  Bounding pulses        Cause-Effect  arterial blood pressure    0.828443   
+328             drug        Cause-Effect                    death    0.827355   
+402             Ants  Entity-Destination                 habitats    0.822531   
+167     devastations        Cause-Effect                   storms    0.822105   
+451          protein  Entity-Destination                     diet    0.818277   
+92            heroin  Entity-Destination                  puppies    0.815445   
+416     inflammation        Cause-Effect                irritants    0.811687   
+386            sugar  Entity-Destination                      mix    0.807832   
+189           cousin  Entity-Destination                portfolio    0.804125   
+246         marriage  Entity-Destination          downward spiral    0.799938   
+268           singer  Entity-Destination                   prison    0.799399   
+395       infections        Cause-Effect                  candida    0.798382   
+511         firebomb  Entity-Destination                      lot    0.796911   
+575            costs  Entity-Destination                consumers    0.794750   
+71          billions  Entity-Destination                economies    0.794074   
+468            water  Entity-Destination                   fields    0.788416   
+337         insomnia        Cause-Effect               depression    0.785597   
+
+     review_threshold  
+583          0.716824  
+257          0.716824  
+267          0.708987  
+540          0.708987  
+328          0.708987  
+402          0.716824  
+167          0.708987  
+451          0.716824  
+92           0.716824  
+416          0.708987  
+386          0.716824  
+189          0.716824  
+246          0.716824  
+268          0.716824  
+395          0.708987  
+511          0.716824  
+575          0.716824  
+71           0.716824  
+468          0.716824  
+337          0.708987  

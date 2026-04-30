@@ -1,0 +1,4 @@
+  text_mode  f1_macro       mcc  pr_auc_macro
+0   markers  0.713638  0.658617      0.763099
+2       raw  0.683538  0.620870      0.732362
+1   masking  0.660954  0.598083      0.715037

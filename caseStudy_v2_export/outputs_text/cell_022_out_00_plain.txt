@@ -1,0 +1,27 @@
+          dataset  seed   model text_mode  f1_macro  mcc  roc_auc_ovr_macro  \
+0   Synthetic-Adv    11  logreg       raw       1.0  1.0                1.0   
+1   Synthetic-Adv    11  logreg   masking       1.0  1.0                1.0   
+2   Synthetic-Adv    11  logreg   markers       1.0  1.0                1.0   
+3   Synthetic-Adv    11     svm       raw       1.0  1.0                1.0   
+4   Synthetic-Adv    11     svm   masking       1.0  1.0                1.0   
+..            ...   ...     ...       ...       ...  ...                ...   
+67  Synthetic-Adv    77      nb   masking       1.0  1.0                1.0   
+68  Synthetic-Adv    77      nb   markers       1.0  1.0                1.0   
+69  Synthetic-Adv    77      rf       raw       1.0  1.0                1.0   
+70  Synthetic-Adv    77      rf   masking       1.0  1.0                1.0   
+71  Synthetic-Adv    77      rf   markers       1.0  1.0                1.0   
+
+    pr_auc_macro        flag  
+0            1.0   f1_near_1  
+1            1.0   f1_near_1  
+2            1.0   f1_near_1  
+3            1.0   f1_near_1  
+4            1.0   f1_near_1  
+..           ...         ...  
+67           1.0  mcc_near_1  
+68           1.0  mcc_near_1  
+69           1.0  mcc_near_1  
+70           1.0  mcc_near_1  
+71           1.0  mcc_near_1  
+
+[72 rows x 9 columns]

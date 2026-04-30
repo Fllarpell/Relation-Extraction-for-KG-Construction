@@ -1,0 +1,8 @@
+                  model  f1_macro  f1_micro  f1_weighted  precision_macro  \
+0  SemEval: TF-IDF + LR  0.678074  0.688982     0.678225         0.676843   
+
+   recall_macro       mcc  balanced_acc  cohen_kappa  roc_auc_ovr_macro  \
+0      0.688879  0.613906      0.688879      0.61123           0.895095   
+
+   pr_auc_macro  
+0      0.715911  

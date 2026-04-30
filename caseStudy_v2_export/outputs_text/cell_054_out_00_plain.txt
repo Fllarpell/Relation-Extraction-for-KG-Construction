@@ -1,0 +1,8 @@
+                     primary_target  \
+0  SemEval KG-style relation output   
+
+                                      selection_rule  \
+0  Use best available SemEval model from sem_summary   
+
+                                     external_signal  
+0  Neural-preferred share on external datasets: 0.25  
